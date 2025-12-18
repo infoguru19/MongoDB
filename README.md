@@ -55,7 +55,8 @@ db.students.insertMany([
 ## Module 4: Querying Data
 **Basic Query Operators (*)**
 * When you only care about which documents match
-* “Which documents do I want?”
+- It answers:
+  “Which documents do I want?”
 * ✅ When you need to filter data based on values
 ```
 db.students.find({ age: { $gte: 18 } })
@@ -70,7 +71,9 @@ db.students.find({ age: { $gte: 18 } })
 | Filtering | Choose which documents |
 | Projection | Choose which fields |
 
-* “Which documents AND which fields from them?”
+- It answers:
+   “Which documents AND which fields from them?”
+  
 * When you want to reduce data transfer and improve performance
 
 ```
@@ -80,6 +83,12 @@ db.students.find(
 )
 ```
 **Using Cursors (*)**
+- What it does
+- A cursor is a pointer to the result set returned by find().
+- MongoDB does not return all documents at once—it returns them in batches.
+
+- It answers:
+“How do I process large result sets efficiently?”
 ```
 const cursor = db.students.find()
 cursor.forEach(doc => print(doc.name))
