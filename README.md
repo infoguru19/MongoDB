@@ -64,9 +64,10 @@ db.students.find({ age: { $gte: 18 } })
 **Filtering and Projection (*)**
 This combines two different actions in a query:
 
-**Part	          Purpose**
-Filtering	        Choose which documents
-Projection	      Choose which fields
+| Part | Purpose |
+| --- | --- |
+| Filtering | Choose which documents |
+| Projection | Choose which fields |
 
 * “Which documents AND which fields from them?”
 * When you want to reduce data transfer and improve performance
