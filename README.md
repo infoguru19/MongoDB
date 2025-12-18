@@ -62,8 +62,8 @@ db.students.find({ age: { $gte: 18 } })
 ```
 
 **Filtering and Projection (*)**
-This combines two different actions in a query:
 
+* This combines two different actions in a query:
 | Part | Purpose |
 | --- | --- |
 | Filtering | Choose which documents |
