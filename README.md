@@ -46,10 +46,12 @@ db.students.insertMany([
 ])
 ```
 ### Bulk vs Single Writes
-**Single Write	  Bulk Write**
-Atomic	          Faster for large data
-Simple	          Optimized network usage
-
+| Single Write   |	  Bulk Write             |
+---------------------------------------------
+| Atomic	        | Faster for large data    |
+---------------------------------------------
+| Simple	        | Optimized network usage  |
+---------------------------------------------
 ## Module 4: Querying Data
 **Basic Query Operators (*)**
 * When you only care about which documents match
