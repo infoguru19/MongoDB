@@ -87,12 +87,16 @@ db.students.find(
 - A cursor is a pointer to the result set returned by find().
 - MongoDB does not return all documents at once—it returns them in batches.
 
-- It answers:
-“How do I process large result sets efficiently?”
+- It answers: “How do I process large result sets efficiently?”
+- ✅ When handling large datasets or streaming results
 ```
-const cursor = db.students.find()
-cursor.forEach(doc => print(doc.name))
+const cursor = db.students.find({ age: { $gte: 18 } })
+
+cursor.forEach(doc => {
+  print(doc.name)
+})
 ```
+
 Module 5: Advanced Query Operators
 Range Operators (*)
 db.students.find({ age: { $gt: 18, $lt: 25 } })
