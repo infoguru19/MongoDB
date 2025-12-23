@@ -149,11 +149,11 @@ db.students.deleteMany({ age: { $lt: 18 } })
 
 ## Module 9: Authentication Models
 - SCRAM Authentication (Default)
-- Username/password based
+  - Username/password based
 - X.509 Certificates
-- Certificate-based auth
+  - Certificate-based auth
 - LDAP Authentication
-   - Centralized enterprise authentication
+  - Centralized enterprise authentication
 
 **Demo: Create User**
 ```
