@@ -97,80 +97,72 @@ cursor.forEach(doc => {
 })
 ```
 
-Module 5: Advanced Query Operators
-Range Operators (*)
-db.students.find({ age: { $gt: 18, $lt: 25 } })
-Logical Operators (*)
-db.students.find({
+## Module 5: Advanced Query Operators
+### Range Operators (*)
+`db.students.find({ age: { $gt: 18, $lt: 25 } })`
+### Logical Operators (*)
+```
+  db.students.find({
   $and: [ { age: { $gt: 20 } }, { name: "Asha" } ]
 })
-Array Operators (*)
-db.students.find({ courses: { $in: ["CS"] } })
-Module 6: Update Operations
-Basic Update Operations (*)
+```
+### Array Operators (*)
+`db.students.find({ courses: { $in: ["CS"] } })`
+## Module 6: Update Operations
+### Basic Update Operations (*)
+```
 db.students.updateOne(
   { name: "Asha" },
   { $set: { age: 22 } }
 )
-Relative Update Operations (*)
+```
+### Relative Update Operations (*)
+```
 db.students.updateOne(
   { name: "Asha" },
   { $inc: { age: 1 } }
 )
-Updating, Locking, and Concurrency
+```
+- Updating, Locking, and Concurrency
+- Document-level locking
+- Atomic operations per document
+- Optimistic concurrency control
 
-Document-level locking
+## Module 7: Deleting Documents
+`db.students.deleteOne({ name: "Ravi" })`
+`db.students.deleteMany({ age: { $lt: 18 } })`
 
-Atomic operations per document
+## Module 8: MongoDB Security Fundamentals
+- Security Layers
+- Authentication
+- Authorization
+- Encryption
+- Auditing
 
-Optimistic concurrency control
+## Module 9: Authentication Models
+- SCRAM Authentication (Default)
+- Username/password based
+- X.509 Certificates
+- Certificate-based auth
+- LDAP Authentication
+   - Centralized enterprise authentication
 
-Module 7: Deleting Documents
-db.students.deleteOne({ name: "Ravi" })
-db.students.deleteMany({ age: { $lt: 18 } })
-Module 8: MongoDB Security Fundamentals
-Security Layers
-
-Authentication
-
-Authorization
-
-Encryption
-
-Auditing
-
-Module 9: Authentication Models
-SCRAM Authentication (Default)
-
-Username/password based
-
-X.509 Certificates
-
-Certificate-based auth
-
-LDAP Authentication
-
-Centralized enterprise authentication
-
-Demo: Create User
+**Demo: Create User**
+```
 use admin
 db.createUser({
   user: "dbAdmin",
   pwd: "StrongPass123",
   roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
 })
-Module 10: Authorization & Roles
-Role-Based Access Control (RBAC)
-
-Built-in Roles:
-
-read
-
-readWrite
-
-dbAdmin
-
-clusterAdmin
+```
+### Module 10: Authorization & Roles
+- Role-Based Access Control (RBAC)
+- Built-in Roles:
+  - read
+  - readWrite
+  - dbAdmin
+  - clusterAdmin
 
 Demo: Assign Role
 db.grantRolesToUser(
