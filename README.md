@@ -99,7 +99,9 @@ cursor.forEach(doc => {
 
 ## Module 5: Advanced Query Operators
 ### Range Operators (*)
-`db.students.find({ age: { $gt: 18, $lt: 25 } })`
+```
+db.students.find({ age: { $gt: 18, $lt: 25 } })
+```
 ### Logical Operators (*)
 ```
   db.students.find({
@@ -107,7 +109,9 @@ cursor.forEach(doc => {
 })
 ```
 ### Array Operators (*)
-`db.students.find({ courses: { $in: ["CS"] } })`
+```
+db.students.find({ courses: { $in: ["CS"] } })
+```
 ## Module 6: Update Operations
 ### Basic Update Operations (*)
 ```
@@ -129,8 +133,12 @@ db.students.updateOne(
 - Optimistic concurrency control
 
 ## Module 7: Deleting Documents
-`db.students.deleteOne({ name: "Ravi" })`
-`db.students.deleteMany({ age: { $lt: 18 } })`
+```
+db.students.deleteOne({ name: "Ravi" })
+```
+```
+db.students.deleteMany({ age: { $lt: 18 } })
+```
 
 ## Module 8: MongoDB Security Fundamentals
 - Security Layers
