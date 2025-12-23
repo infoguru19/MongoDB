@@ -172,97 +172,48 @@ db.createUser({
   - dbAdmin
   - clusterAdmin
 
-Demo: Assign Role
+**Demo: Assign Role**
+```
 db.grantRolesToUser(
   "dbAdmin",
   [ { role: "readWrite", db: "school" } ]
 )
-Module 11: LDAP Integration
-LDAP Use Cases
-
-Corporate Active Directory
-
-Central user management
-
-Configuration (Conceptual)
+```
+## Module 11: LDAP Integration
+- LDAP Use Cases
+  - Corporate Active Directory
+  - Central user management
+- Configuration (Conceptual)
+```
 security:
   authorization: enabled
   ldap:
     servers: ldap.example.com
-Module 12: Encryption
-Encryption In Flight
+```
+## Module 12: Encryption
+- Encryption In Flight
+  - TLS/SSL
+  - Protects data between client and server
+- Encryption At Rest
+  - Encrypted storage engine
+  - Protects disk data
+- Encryption In Use
+  - Client-side field-level encryption
 
-TLS/SSL
+## Module 13: Auditing
+- What is Auditing?
+  - Tracks database activity
+  - Required for compliance
 
-Protects data between client and server
+- Audit Events
+  - Authentication attempts
+  - CRUD operations
+  - Role changes
 
-Encryption At Rest
+## Module 14: Additional Security Measures
+- IP Whitelisting
+- Network isolation
+- Regular backups
+- Index access control
+- Monitoring and alerts
 
-Encrypted storage engine
-
-Protects disk data
-
-Encryption In Use
-
-Client-side field-level encryption
-
-Module 13: Auditing
-What is Auditing?
-
-Tracks database activity
-
-Required for compliance
-
-Audit Events
-
-Authentication attempts
-
-CRUD operations
-
-Role changes
-
-Module 14: Additional Security Measures
-
-IP Whitelisting
-
-Network isolation
-
-Regular backups
-
-Index access control
-
-Monitoring and alerts
-
-Final Hands-On Demo: Secure Database Setup
-
-Enable authentication
-
-Create admin user
-
-Assign least-privilege roles
-
-Enable TLS
-
-Enable auditing
-
-Course Completion Outcomes
-
-By the end of this course, you will be able to:
-
-Design and query MongoDB databases
-
-Perform CRUD operations efficiently
-
-Manage concurrency and updates
-
-Secure MongoDB using industry best practices
-
-Recommended Practice
-
-MongoDB Atlas Free Tier
-
-MongoDB Compass
-
-MongoDB University (M001, M103)
-
-End of MDB100 Course
